@@ -36,16 +36,16 @@ const Projects = () => {
                   </div>
                   <div className="space-y-3 text-sm font-mono">
                     <div className="text-neon-cyan">@RestController</div>
-                    <div className="text-gray-400">public class <span className="text-electric-blue">UserController</span> {</div>
+                    <div className="text-gray-400">public class <span className="text-electric-blue">UserController</span> {`{`}</div>
                     <div className="ml-4 text-gray-400">
                       @PostMapping(<span className="text-green-400">"/api/users"</span>)
                     </div>
                     <div className="ml-4 text-gray-400">
-                      public ResponseEntity<span className="text-electric-blue">&lt;User&gt;</span> createUser() {
+                      public ResponseEntity<span className="text-electric-blue">&lt;User&gt;</span> createUser() {`{`}
                     </div>
                     <div className="ml-8 text-gray-400">// Spring Boot REST API</div>
-                    <div className="ml-4 text-gray-400">}</div>
-                    <div className="text-gray-400">}</div>
+                    <div className="ml-4 text-gray-400">{`}`}</div>
+                    <div className="text-gray-400">{`}`}</div>
                   </div>
                 </div>
               </div>
