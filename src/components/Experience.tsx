@@ -1,5 +1,4 @@
-
-import { Building2, Calendar, Code } from 'lucide-react';
+import { Building2, Calendar, Code } from "lucide-react";
 
 const Experience = () => {
   return (
@@ -20,7 +19,9 @@ const Experience = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">Intern</h3>
-                    <p className="text-electric-blue font-medium">Cognizant Technology Solutions</p>
+                    <p className="text-electric-blue font-medium">
+                      Cognizant Technology Solutions
+                    </p>
                     <p className="text-gray-400">Microservices Domain</p>
                   </div>
                 </div>
@@ -32,34 +33,46 @@ const Experience = () => {
 
               <div className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  Currently working on microservice-based architecture using Spring Boot and related technologies. 
-                  Gaining hands-on experience in building scalable, distributed systems and learning industry best practices.
+                  Currently working on microservice-based architecture using
+                  Spring Boot and related technologies. Gaining hands-on
+                  experience in building scalable, distributed systems and
+                  learning industry best practices.
                 </p>
-                
+
                 <div className="flex items-center text-neon-cyan">
                   <Code size={16} className="mr-2" />
-                  <span className="text-sm font-medium">Key Technologies: Spring Boot, Microservices, REST APIs</span>
+                  <span className="text-sm font-medium">
+                    Key Technologies: Spring Boot, Microservices, REST APIs
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Previous Internships */}
-            <div className="tech-border rounded-xl p-8 bg-dark-card/20 backdrop-blur-sm hover:bg-dark-card/40 transition-all duration-300 animate-fade-in">
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="p-3 bg-neon-purple/10 rounded-lg">
-                  <Code className="text-neon-purple" size={24} />
+            <div className="tech-border rounded-xl p-8 bg-dark-card/30 backdrop-blur-sm hover:bg-dark-card/50 transition-all duration-300 animate-fade-in">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex items-start space-x-4 mb-4 md:mb-0">
+                  <div className="p-3 bg-electric-blue/10 rounded-lg">
+                    <Code className="text-neon-purple" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">
+                      Web Developer | Web Designer
+                    </h3>
+                    <p className="text-neon-purple font-medium">Prafal Agro</p>
+                    <p className="text-gray-400">Full Stack Development</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Web Development Internships</h3>
-                  <p className="text-neon-purple font-medium">Multiple Organizations</p>
-                  <p className="text-gray-400">Full Stack Development</p>
+                <div className="flex items-center text-neon-purple">
+                  <Calendar size={16} className="mr-2" />
+                  <span className="text-sm">Nov 2023 – Feb 2024</span>
                 </div>
               </div>
 
               <p className="text-gray-300 leading-relaxed">
-                Completed two comprehensive web development internships, gaining practical experience in both 
-                frontend and backend development. Worked with modern web technologies and frameworks to build 
-                responsive, user-friendly applications.
+                "Streamlined development and design workflows, cutting company
+                workload by up to 40% and boosting digital engagement by 20%
+                through responsive, visually compelling web solutions."
               </p>
             </div>
           </div>

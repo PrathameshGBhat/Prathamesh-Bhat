@@ -1,22 +1,21 @@
-
-import { useState } from 'react';
-import { Mail, Linkedin, Github, Send, MapPin, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Mail, Linkedin, Github, Send, MapPin, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -34,35 +33,37 @@ const Contact = () => {
     });
 
     // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   const socialLinks = [
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      href: '#',
-      color: 'hover:text-blue-400'
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/prathamesh-bhat-375443293/",
+      color: "hover:text-blue-400",
     },
     {
       icon: Github,
-      label: 'GitHub',
-      href: '#',
-      color: 'hover:text-gray-300'
+      label: "GitHub",
+      href: "https://github.com/PrathameshGBhat",
+      color: "hover:text-gray-300",
     },
-    {
-      icon: Mail,
-      label: 'Email',
-      href: 'mailto:prathamesh@example.com',
-      color: 'hover:text-electric-blue'
-    }
+    // {
+    //   icon: Mail,
+    //   label: "Email",
+    //   href: "prathameshtengse@gmail.com",
+    //   color: "hover:text-electric-blue",
+    // },
   ];
 
   return (
@@ -77,10 +78,13 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8 animate-slide-in-left">
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-4">Let's Connect</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  Let's Connect
+                </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I'm always open to discussing new opportunities, interesting projects, 
-                  or just having a conversation about technology. Feel free to reach out!
+                  I'm always open to discussing new opportunities, interesting
+                  projects, or just having a conversation about technology. Feel
+                  free to reach out!
                 </p>
               </div>
 
@@ -92,10 +96,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
-                    <p className="text-white">prathamesh@example.com</p>
+                    <p className="text-white">prathameshtengse25@gmail.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-neon-purple/10 rounded-lg">
                     <MapPin className="text-neon-purple" size={20} />
@@ -127,11 +131,19 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="animate-fade-in">
-              <form onSubmit={handleSubmit} className="tech-border rounded-xl p-8 bg-dark-bg/30 backdrop-blur-sm space-y-6">
-                <h3 className="text-xl font-semibold text-white mb-6">Send a Message</h3>
-                
+              <form
+                onSubmit={handleSubmit}
+                className="tech-border rounded-xl p-8 bg-dark-bg/30 backdrop-blur-sm space-y-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-6">
+                  Send a Message
+                </h3>
+
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-400 mb-2"
+                  >
                     Your Name
                   </label>
                   <Input
@@ -146,7 +158,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-400 mb-2"
+                  >
                     Your Email
                   </label>
                   <Input
@@ -161,7 +176,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-400 mb-2"
+                  >
                     Your Message
                   </label>
                   <Textarea
