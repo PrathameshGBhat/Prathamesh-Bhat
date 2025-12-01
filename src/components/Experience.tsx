@@ -18,7 +18,9 @@ const Experience = () => {
                     <Building2 className="text-electric-blue" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Intern</h3>
+                    <h3 className="text-xl font-semibold text-white">
+                      Program Analyst Trainee
+                    </h3>
                     <p className="text-electric-blue font-medium">
                       Cognizant Technology Solutions
                     </p>
@@ -48,7 +50,46 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Previous Internships */}
+            {/* Experience 2 */}
+            <div className="tech-border rounded-xl p-8 bg-dark-card/30 backdrop-blur-sm hover:bg-dark-card/50 transition-all duration-300 animate-fade-in">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                <div className="flex items-start space-x-4 mb-4 md:mb-0">
+                  <div className="p-3 bg-electric-blue/10 rounded-lg">
+                    <Building2 className="text-electric-blue" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">Intern</h3>
+                    <p className="text-electric-blue font-medium">
+                      Cognizant Technology Solutions
+                    </p>
+                    <p className="text-gray-400">Microservices Domain</p>
+                  </div>
+                </div>
+                <div className="flex items-center text-neon-purple">
+                  <Calendar size={16} className="mr-2" />
+                  <span className="text-sm">March 2025 - May 2025</span>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <p className="text-gray-300 leading-relaxed">
+                  Gained a strong understanding of core Java concepts and
+                  microservices architecture, which I applied to design and
+                  develop a project addressing a real-world problem. The project
+                  showcased practical implementation of the technologies and
+                  concepts learned during my training.
+                </p>
+
+                <div className="flex items-center text-neon-cyan">
+                  <Code size={16} className="mr-2" />
+                  <span className="text-sm font-medium">
+                    Key Technologies: Spring Boot, Microservices, REST APIs
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Experience 3 */}
             <div className="tech-border rounded-xl p-8 bg-dark-card/30 backdrop-blur-sm hover:bg-dark-card/50 transition-all duration-300 animate-fade-in">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div className="flex items-start space-x-4 mb-4 md:mb-0">

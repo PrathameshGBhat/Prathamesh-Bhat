@@ -1,4 +1,5 @@
 import { GraduationCap, Award } from "lucide-react";
+import DotParticleCanvas from "./DotParticleCanvas";
 
 const About = () => {
   return (
@@ -16,10 +17,13 @@ const About = () => {
                 Prathamesh Bhat
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm a Computer Science graduate from Sahyadri College of
-                Engineering, with an 8+ CGPA. I've completed two internships in
-                Web Development and currently working as an intern at Cognizant
-                Technology Solutions in the Microservices Domain.
+                I’m a Computer Science graduate from Sahyadri College of
+                Engineering with a strong academic record (8+ CGPA). After
+                completing two internships in web development, I began my
+                professional journey with Cognizant Technology Solutions, where
+                I now work full-time in the Microservices Domain. My expertise
+                lies in developing secure and scalable backend systems using
+                Java, Spring Boot, and RESTful APIs.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Passionate about backend development, I specialize in building

@@ -1,5 +1,8 @@
+"use client"; // Make sure this is at the very top for client-side rendering
+
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import DotParticleCanvas from "./DotParticleCanvas";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -25,25 +28,35 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-hero-gradient"></div>
-      <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-20"></div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 border border-electric-blue/30 rounded-full animate-float"></div>
+      {/* --- DotParticleCanvas as the main background --- */}
+      {/* It's placed first to ensure it's at the lowest layer */}
+      <DotParticleCanvas
+        backgroundColor="28, 28, 32" // This is an RGB string
+        particleColor="135, 206, 250" // This is an RGB string
+        animationSpeed={0.003}
+      />
+      {/* --- Existing Background Effects (now layered on top of DotParticleCanvas but still behind content) --- */}
+      {/* These will overlay the particle canvas. Adjust opacities as needed. */}
+      <div className="absolute inset-0 bg-hero-gradient z-[1]"></div>{" "}
+      {/* Added z-index */}
+      <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-10 z-[1]"></div>{" "}
+      {/* Added z-index, adjusted opacity */}
+      {/* --- Floating Elements (also layered on top of DotParticleCanvas) --- */}
+      {/* Ensure these elements have a higher z-index than the background layers */}
+      <div className="absolute top-20 left-10 w-20 h-20 border border-electric-blue/30 rounded-full animate-float z-[2]"></div>
       <div
-        className="absolute bottom-32 right-16 w-16 h-16 border border-neon-purple/30 rounded-lg animate-float"
+        className="absolute bottom-32 right-16 w-16 h-16 border border-neon-purple/30 rounded-lg animate-float z-[2]"
         style={{ animationDelay: "1s" }}
       ></div>
       <div
-        className="absolute top-1/2 right-20 w-12 h-12 border border-neon-cyan/30 rounded-full animate-float"
+        className="absolute top-1/2 right-20 w-12 h-12 border border-neon-cyan/30 rounded-full animate-float z-[2]"
         style={{ animationDelay: "2s" }}
       ></div>
-
+      {/* --- Main Content (highest z-index to ensure visibility and interactivity) --- */}
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Profile Picture Placeholder */}
-          <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-electric-blue to-neon-purple p-1 animate-glow-pulse">
+          <div className="w-40 h-40 mx-auto mb-6 rounded-full bg-gradient-to-r from-electric-blue to-neon-purple p-1 animate-glow-pulse">
             <div className="w-full h-full rounded-full bg-dark-card flex items-center justify-center">
               <div className="w-32 h-32 rounded-full overflow-hidden">
                 <img

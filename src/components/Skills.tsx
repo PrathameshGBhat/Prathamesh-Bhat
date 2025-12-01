@@ -30,6 +30,9 @@ const Skills = () => {
   const additionalSkills = [
     { name: "C++", level: 75, color: "neon-cyan" },
     { name: "MERN Stack", level: 70, color: "electric-blue" },
+    { name: "Apache Kafka", level: 65, color: "neon-purple" },
+    { name: "Apache Camel", level: 60, color: "electric-blue" },
+    { name: "Terraform", level: 30, color: "neon-cyan" },
   ];
 
   const renderSkills = (
